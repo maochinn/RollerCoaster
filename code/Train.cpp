@@ -1,4 +1,4 @@
-#include "code/Train.h"
+#include "Train.h"
 
 //local function
 
@@ -59,13 +59,13 @@ void Train::update(float dt)
 	else
 		next_pos = spline.getModelMatrixDistance(this->car_position - 1.0f)[3];
 
-	this->world_car_velocity = (next_pos - now_pos) / dt;
+	//this->world_car_velocity = (next_pos - now_pos) / dt;
 
-	float acceleration = -this->world_car_velocity.y * 0.1f;
-	if (this->car_velocity >= 0)
-		this->car_velocity = this->car_velocity + acceleration * dt;
-	else	
-		this->car_velocity = this->car_velocity - acceleration * dt;
+	//float acceleration = -this->world_car_velocity.y * 0.1f;
+	//if (this->car_velocity >= 0)
+	//	this->car_velocity = this->car_velocity + acceleration * dt;
+	//else	
+	//	this->car_velocity = this->car_velocity - acceleration * dt;
 
 
 	//this->car_velocity -= 1.0f* dt;
